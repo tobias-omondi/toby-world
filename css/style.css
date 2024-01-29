@@ -164,17 +164,12 @@ section {
     color: var(--white-color);
 }
 .home-img img {
-    height: 80vh;
-    border-radius: 155px 24px 197px 24px;
-    -webkit-border-radius: 155px 24px 197px 24px;
-    -moz-border-radius: 155px 24px 197px 24px;
-    transition: filter 0.3s ease-in-out; /* Add a smooth transition for the filter */
-  }
-  
-  .home-img img:hover {
-    filter: sepia(100%);  /* Apply the sepia filter on hover */
-  }
-  
+    width: 50%;
+    border-radius: 136px 13px 182px 66px;
+-webkit-border-radius: 136px 13px 182px 66px;
+-moz-border-radius: 136px 13px 182px 66px;
+}
+
 .btn {
     display: inline-block;
     padding: 1.2rem 2.8rem;
