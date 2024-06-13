@@ -243,23 +243,45 @@
         </div>
     </div>
 
-    <!-- contact section design -->
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init("OINvrquogiN0L1YH-");
+})();
+</script>
+<!-- contact section design -->
+<section class="contact" id="contact">
+<h2 class="heading">Contact <span>Me!</span></h2>
 
-        <form action="mailto:tobiasogola42gmail.com" method="post" enctype="text/plain">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
-            </div>
-            <div class="input-box">
-                <input type="number" placeholder="Mobile Number" required>
-                <input type="text" placeholder="Email Subject">
-            </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
-    </section>
+<form id="contact-form">
+    <div class="input-box">
+        <input type="text" name="from_name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+    </div>
+    <div class="input-box">
+        <input type="number" name="phone" placeholder="Mobile Number" required>
+        <input type="text" name="subject" placeholder="Email Subject">
+    </div>
+    <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+    <input type="submit" value="Send Message" class="btn">
+</form>
+</section>
+
+<script type="text/javascript">
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent the form from submitting the default way
+    emailjs.sendForm('service_ohintua', 'template_20zt4ma', this)
+        .then(function() {
+            alert('Your message has been sent successfully!');
+        }, function(error) {
+            alert('Failed to send the message, please try again later.');
+            console.log('Failed...', error);
+        });
+});
+</script>
+
 
     <!-- footer design -->
     <footer class="footer">
