@@ -372,6 +372,7 @@ span {
 .services-box i {
     font-size: 7rem;
     color: var(--main-color);
+    max-height: 60%;
 }
 
 .services-box h3 {
